@@ -17,10 +17,18 @@ const HomeScreen =(props)=>{
         		<Text style={{fontSize: 20, color: 'black'}}>My Profile</Text>
       		</TouchableOpacity>
 
-			<Button title="Semester Wise Course View">
+			<Button title="Semester Wise Course View" onPress={
+				function () {
+					props.navigation.navigate("Faculty");
+				}
+			}>
 			</Button>
 			
-			<Button title="List of Faculty Members" >
+			<Button title="List of Faculty Members" onPress={
+				function () {
+					props.navigation.navigate("Faculty");
+				}
+			}>
 			</Button>
 		</View>
 		);
