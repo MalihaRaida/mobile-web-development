@@ -28,6 +28,7 @@ const SemesterDetailsScreen = (props) => {
     if (semester.id=='1') {
         return (
           <View style={styles.container}>
+            <Text style={{fontSize:20,margin:10}}>{semester.name} Semester</Text>
             <FlatList
               data={semesterOne}
               renderItem={function ({ item }) {
@@ -40,6 +41,9 @@ const SemesterDetailsScreen = (props) => {
     else if (semester.id=='2') {
         return (
           <View style={styles.container}>
+            <Text style={{ fontSize: 20, margin: 10 }}>
+              {semester.name} Semester
+            </Text>
             <FlatList
               data={semesterTwo}
               renderItem={function ({ item }) {
@@ -52,6 +56,9 @@ const SemesterDetailsScreen = (props) => {
     else if(semester.id=='3'){
         return (
           <View style={styles.container}>
+            <Text style={{ fontSize: 20, margin: 10 }}>
+              {semester.name} Semester
+            </Text>
             <FlatList
               data={semesterThree}
               renderItem={function ({ item }) {
