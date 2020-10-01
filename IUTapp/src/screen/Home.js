@@ -1,7 +1,7 @@
 import React from 'react';
-import {Text, View, Image,StyleSheet, TouchableOpacity} from 'react-native';
+import { Text, View, Button, Image,StyleSheet, TouchableOpacity} from 'react-native';
 
-const HomeScreen =()=>{
+const HomeScreen =(props)=>{
 	return (
 		<View style={styles.container}>
 			<Image style={styles.imageStyle}
@@ -9,10 +9,19 @@ const HomeScreen =()=>{
 			</Image>
 			<Text style={styles.textStyle}>Department Of CSE</Text>
 			<Text style={styles.textStyle}>Programme: SWE</Text>
-			<TouchableOpacity style={styles.button}>
+			<TouchableOpacity style={styles.button} onPress={
+				function () {
+					props.navigation.navigate("Profile");
+				}
+			}>
         		<Text style={{fontSize: 20, color: 'black'}}>My Profile</Text>
       		</TouchableOpacity>
 
+			<Button title="Semester Wise Course View">
+			</Button>
+			
+			<Button title="List of Faculty Members" >
+			</Button>
 		</View>
 		);
 }
@@ -23,7 +32,7 @@ const styles = StyleSheet.create(
 	    display: "flex",
 	    justifyContent: "space-around",
 	    alignItems: "center",
-	    height: "50%",
+	    height: "75%",
 	    textAlign: "center"
 	  },
 
