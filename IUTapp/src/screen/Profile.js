@@ -5,9 +5,9 @@ const ProfileScreen=()=>{
     return(
         <View style={styles.container}>
            <Image source={require('./../../assets/170042001.jpg')} style={styles.imageStyle}></Image>
-            <Text>Name: Maliha Noushin Raida</Text>
-            <Text>Student Id: 170042001</Text>
-            <Text>Email: malihanoushin@iut-dhaka.edu</Text>
+            <Text style={styles.textStyle}>Name: Maliha Noushin Raida</Text>
+            <Text style={styles.textStyle}>Student Id: 170042001</Text>
+            <Text style={styles.textStyle}>Email: malihanoushin@iut-dhaka.edu</Text>
         </View>
     );
 }
@@ -15,15 +15,22 @@ const ProfileScreen=()=>{
 const styles=StyleSheet.create(
     {
         container: {
+            paddingTop:25,
             display: "flex",
             justifyContent: "space-around",
             alignItems: "center",
-            
             textAlign: "center"
         },
         imageStyle:{
             height:200,
             width:150
+        },
+        textStyle:{
+            padding: 10,
+            marginVertical: 5,
+            marginHorizontal: 10,
+            fontSize: 15,
+            color: 'black',
         }
     }
 );
