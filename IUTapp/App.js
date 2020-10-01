@@ -5,19 +5,21 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './src/screen/Home';
 import ProfileScreen from './src/screen/Profile';
 import ListScreen from './src/screen/FacultyList';
+import SemesterScreen from './src/screen/SemesterList';
 
 const stack = createStackNavigator();
 
 function App(){
-  return(
+  return (
     <NavigationContainer>
       <stack.Navigator>
         <stack.Screen name="Home" component={HomeScreen} />
-        <stack.Screen name="Profile" component={ProfileScreen}/>
-        <stack.Screen name="Faculty" component={ListScreen}/>
+        <stack.Screen name="Profile" component={ProfileScreen} />
+        <stack.Screen name="Semester" component={SemesterScreen} />
+        <stack.Screen name="Faculty" component={ListScreen} />
       </stack.Navigator>
     </NavigationContainer>
-    );
+  );
 }
 
 export default App;

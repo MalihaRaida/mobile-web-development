@@ -3,35 +3,39 @@ import { Text, View, Button, Image,StyleSheet, TouchableOpacity} from 'react-nat
 
 const HomeScreen =(props)=>{
 	return (
-		<View style={styles.container}>
-			<Image style={styles.imageStyle}
-			source={require('./../../assets/iut_logo.png')}>
-			</Image>
-			<Text style={styles.textStyle}>Department Of CSE</Text>
-			<Text style={styles.textStyle}>Programme: SWE</Text>
-			<TouchableOpacity style={styles.button} onPress={
-				function () {
-					props.navigation.navigate("Profile");
-				}
-			}>
-        		<Text style={{fontSize: 20, color: 'black'}}>My Profile</Text>
-      		</TouchableOpacity>
+    <View style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("./../../assets/iut_logo.png")}
+      ></Image>
+      <Text style={styles.textStyle}>Department Of CSE</Text>
+      <Text style={styles.textStyle}>Programme: SWE</Text>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={function () {
+          props.navigation.navigate("Profile");
+        }}
+      >
+        <Text style={{ fontSize: 20, color: "black" }}>My Profile</Text>
+      </TouchableOpacity>
 
-			<Button title="Semester Wise Course View" onPress={
-				function () {
-					props.navigation.navigate("Faculty");
-				}
-			}>
-			</Button>
-			
-			<Button title="List of Faculty Members" onPress={
-				function () {
-					props.navigation.navigate("Faculty");
-				}
-			}>
-			</Button>
-		</View>
-		);
+      <Button
+        title="Semester Wise Course View"
+        color="#00ffbf"
+        onPress={function () {
+          props.navigation.navigate("Semester");
+        }}
+      ></Button>
+
+      <Button
+        title="List of Faculty Members"
+        color="#f9c2ff"
+        onPress={function () {
+          props.navigation.navigate("Faculty");
+        }}
+      ></Button>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create(
