@@ -1,6 +1,8 @@
 import React from 'react';
 import { Text, View, Button, Image,StyleSheet, TouchableOpacity} from 'react-native';
 
+
+
 const HomeScreen =(props)=>{
 	return (
     <View style={styles.container}>
