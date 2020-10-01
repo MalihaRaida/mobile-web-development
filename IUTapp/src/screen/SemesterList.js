@@ -5,21 +5,25 @@ const semester = [
   { id: "1", name: "1st" },
   { id: "2", name: "2nd" },
   { id: "3", name: "3rd" },
-  { id: "4", name: "4th" },
-  { id: "5", name: "5th" },
-  { id: "6", name: "6th" },
-  { id: "7", name: "7th" },
-  { id: "8", name: "8th" },
+ 
 ];
 
-const SemesterScreen=()=>{
+
+
+const SemesterScreen=(props)=>{
     return (
       <View style={styles.container}>
         <FlatList
           data={semester}
-          renderItem={function ({ item }) {
+          renderItem={function ({ item })
+           {
             return (
-              <TouchableOpacity style={styles.button}>
+              <TouchableOpacity 
+              style={styles.button}
+              onPress={ function () {
+                props.navigation.navigate("Courses", item);
+                }
+              }>
                 <Text style={styles.textStyle}>{item.name} Semester</Text>
               </TouchableOpacity>
             );
