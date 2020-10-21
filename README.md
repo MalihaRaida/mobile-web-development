@@ -1,3 +1,3 @@
-## SWE 4637 & SWE 4638 ##
+## SWE 4638:IUTAPP ##
 
-All the assigned tasks will be stored here. Mobile app will be build with React Native and for Web app, React js will be used.   
+An application with react native using basics of FlatList, Navigation, Image, View.
